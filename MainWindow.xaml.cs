@@ -6,7 +6,6 @@ using System.Windows;
 namespace subscribers_box{
   public partial class MainWindow : Window{
     private string channelID = "";
-
     public MainWindow(){
       InitializeComponent();
     }

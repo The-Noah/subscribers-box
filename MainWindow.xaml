@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:subscribers_box"
         mc:Ignorable="d"
-        Title="Subscribers Box" Width="150" Height="100" WindowStyle="ToolWindow">
+        ResizeMode="CanMinimize"
+        Title="Subscribers Box" Width="250" Height="150">
   <Grid>
-    <Label Name="Subscribers" FontSize="28" HorizontalAlignment="Center"/>
+    <Label Name="Subscribers" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,16"/>
     <StackPanel Name="Start">
       <Label Content="Channel ID" HorizontalAlignment="Center" Padding="0"/>
       <TextBox Name="ChannelID"/>
