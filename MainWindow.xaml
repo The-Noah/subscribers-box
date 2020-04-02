@@ -10,8 +10,8 @@
   <Grid>
     <Label Name="Subscribers" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,16"/>
     <StackPanel Name="Start">
-      <Label Content="Channel ID" HorizontalAlignment="Center" Padding="0"/>
-      <TextBox Name="ChannelID"/>
+      <Label Content="Channel URL" HorizontalAlignment="Center" Padding="0"/>
+      <TextBox Name="ChannelURL"/>
       <Button Content="Go" Click="Go_Click"/>
     </StackPanel>
   </Grid>

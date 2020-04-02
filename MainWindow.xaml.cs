@@ -5,13 +5,13 @@ using System.Windows;
 
 namespace subscribers_box{
   public partial class MainWindow : Window{
-    private string channelID = "";
+    private string channelURL = "";
     public MainWindow(){
       InitializeComponent();
     }
 
     private void UpdateData(object source, ElapsedEventArgs e){
-      string content = (new WebClient()).DownloadString($"https://www.youtube.com/channel/{channelID}");
+      string content = (new WebClient()).DownloadString(channelURL);
       string toBeSearched = "subscriber-count";
       content = content.Substring(content.IndexOf(toBeSearched) + toBeSearched.Length);
       int from = content.IndexOf(">") + ">".Length;
@@ -25,11 +25,14 @@ namespace subscribers_box{
     }
 
     private void Go_Click(object sender, RoutedEventArgs e){
-      if(ChannelID.Text == ""){
+      if(ChannelURL.Text == ""){
+        return;
+      }else if(!ChannelURL.Text.StartsWith("https://www.youtube.com/user/") && !ChannelURL.Text.StartsWith("https://www.youtube.com/channel/")){
+        MessageBox.Show("Invalid channel URL");
         return;
       }
 
-      channelID = ChannelID.Text;
+      channelURL = ChannelURL.Text;
       Start.Visibility = Visibility.Collapsed;
 
       UpdateData(null, null);
