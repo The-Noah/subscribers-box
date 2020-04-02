@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>subscribers_box</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="subscribers_box.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:subscribers_box"
+        mc:Ignorable="d"
+        Title="Subscribers Box" Width="150" Height="100" WindowStyle="ToolWindow">
+  <Grid>
+    <Label Name="Subscribers" FontSize="28" HorizontalAlignment="Center"/>
+    <StackPanel Name="Start">
+      <Label Content="Channel ID" HorizontalAlignment="Center" Padding="0"/>
+      <TextBox Name="ChannelID"/>
+      <Button Content="Go" Click="Go_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>
